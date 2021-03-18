@@ -86,13 +86,11 @@ class Game():
                             running = False
             else: 
                 pos = AI.minimax(pieces.ar,pieces,'b',-1000000000,1000000000,3,None,pieces.prev_move)
-                if pos[1] == None:
-                    End(board, pieces)
-                else:    
-                 pieces.selecting(pos[1])
-                 pieces.move(pieces.ar, pos[1], pos[2])
-                 last_pos = (pos[1], pos[2])
-                 player = 1 - player
+                
+                pieces.selecting(pos[1])
+                pieces.move(pieces.ar, pos[1], pos[2])
+                last_pos = (pos[1], pos[2])
+                player = 1 - player
                 if pieces.is_checked(pieces.ar, cplayer[player]):
                         if pieces.is_checkmate(pieces.ar, cplayer[player]):
                   
