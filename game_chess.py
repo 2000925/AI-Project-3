@@ -85,7 +85,7 @@ class Game():
                          
                             running = False
             else: 
-                pos = AI.minimax(pieces.ar,pieces,'b',-1000000000,1000000000,1,None,pieces.prev_move)
+                pos = AI.minimax(pieces.ar,pieces,'b',-1000000000,1000000000,3,None,pieces.prev_move)
                 if pos[1] == None:
                     End(board, pieces)
                 else:    
