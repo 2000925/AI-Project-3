@@ -209,7 +209,7 @@ class AI_Minimax(AI):
                     if alpha >= beta:
                         break
             if draw:
-                return [0, None, None]
+                return [0,0,0]
             return max_s
         else: # Minimal Player
             min_s = [1000000000, None, None]
